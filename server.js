@@ -5,12 +5,12 @@ const path = require('path');
 const app = express();
 
 // Serve only the static files form the dist directory
-app.use(express.static(__dirname + './dist'));
+app.use(express.static('/dist/ang6-heroku-frontend'));
 console.log(__dirname);
 
 app.get('/*', function(req,res) {
     
-res.sendFile(path.join(__dirname + './dist/index.html'));
+res.sendFile(path.join('/dist/ang6-heroku-frontend/index.html'));
 console.log(__dirname);
 });
 
