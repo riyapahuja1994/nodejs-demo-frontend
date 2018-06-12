@@ -11,7 +11,7 @@ console.log(__dirname);
 app.get('/*', function(req,res) {
     
 res.sendFile(path.join('/dist/ang6-heroku-frontend/index.html'));
-console.log(__dirname);
+console.log("Path"+path);
 });
 
 // Start the app by listening on the default Heroku port
