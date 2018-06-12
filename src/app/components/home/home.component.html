@@ -1,0 +1,136 @@
+<div class="container">
+	<br>
+	<div class="card-body">
+	<form #userForm="ngForm">
+		<!-- <div class="form-group">
+			<label for="id">Id</label>
+				<input [readonly]="rdonly" required class="form-control" type="text" name="id" #Tid="ngModel" [(ngModel)]="id">
+				<div *ngIf="Tid.touched && Tid.invalid" class="alert-error">
+						<p *ngIf="Tid.errors.required">Id is required.</p>
+					</div>
+		</div> -->
+		<div class="form-group">
+			<label for="name">Name</label>
+				<input [readonly]="rdonly" required class="form-control" type="text" name="name" [(ngModel)]="name" #Tname="ngModel">
+				<div *ngIf="Tname.touched && Tname.invalid" class="alert-error">
+					<p *ngIf="Tname.errors.required">Name is required.</p>
+				</div>
+		</div>
+		<div class="form-group">
+			<label for="username">Username</label>
+				<input [readonly]="rdonly" required class="form-control" type="text" name="username" #Tusername="ngModel" [(ngModel)]="username">
+				<div *ngIf="Tusername.touched && Tusername.invalid" class="alert-error">
+						<p *ngIf="Tusername.errors.required">Username is required.</p>
+					</div>
+		</div>
+		<!-- <div class="form-group">
+			<label for="email">Email</label>
+				<input [readonly]="rdonly" required email class="form-control" type="email" name="email" [(ngModel)]="email" #Temail="ngModel">
+				<div *ngIf="Temail.touched && Temail.invalid" class="alert-error">
+					<p *ngIf="Temail.errors.required">Email is required.</p>
+					<p *ngIf="Temail.errors.email">Please enter a valid email.</p>
+				</div>								
+		</div>
+		<div class="form-group">
+			<label for="phone">Phone</label>
+				<input [readonly]="rdonly" required class="form-control" type="text" name="phone" #Tphone="ngModel" [(ngModel)]="phone">
+				<div *ngIf="Tphone.touched && Tphone.invalid" class="alert-error">
+						<p *ngIf="Tphone.errors.required">Phone is required.</p>
+					</div>
+		</div>
+		<div class="form-group">
+			<label for="website">Website</label>
+				<input [readonly]="rdonly" class="form-control" type="text" name="website" ngModel [(ngModel)]="website">
+		</div>
+
+		<div ngModelGroup="address">
+			<div class="form-group">
+				<label for="street">Street</label>
+					<input [readonly]="rdonly" required class="form-control" type="text" name="street" #Tstreet="ngModel" [(ngModel)]="street">
+					<div *ngIf="Tstreet.touched && Tstreet.invalid" class="alert-error">
+							<p *ngIf="Tstreet.errors.required">Street is required.</p>
+					</div>
+			</div>
+			<div class="form-group">
+				<label for="suite">Suite</label>
+					<input [readonly]="rdonly" required  class="form-control" type="text" name="suite" #Tsuite="ngModel" [(ngModel)]="suite">
+					<div *ngIf="Tsuite.touched && Tsuite.invalid" class="alert-error">
+							<p *ngIf="Tsuite.errors.required">Suite is required.</p>
+						</div>
+			</div>
+			<div class="form-group">
+				<label for="city">City</label>
+					<input [readonly]="rdonly" required class="form-control" type="text" name="city" #Tcity="ngModel" [(ngModel)]="city">
+					<div *ngIf="Tcity.touched && Tcity.invalid" class="alert-error">
+							<p *ngIf="Tcity.errors.required">City is required.</p>
+						</div>
+			</div>
+			<div class="form-group">
+				<label for="zipcode">Zipcode</label>
+					<input [readonly]="rdonly" required class="form-control" type="text" name="zipcode" #Tzip="ngModel" [(ngModel)]="zipcode">
+					<div *ngIf="Tzip.touched && Tzip.invalid" class="alert-error">
+							<p *ngIf="Tzip.errors.required">Zipcode is required.</p>
+						</div>
+			</div>
+
+			<div ngModelGroup="geoCode">	
+				<div class="form-group">
+					<label for="lat">Latitude</label>
+						<input [readonly]="rdonly" required class="form-control" type="text" name="lat" #Tlat="ngModel" [(ngModel)]="lat">
+						<div *ngIf="Tlat.touched && Tlat.invalid" class="alert-error">
+								<p *ngIf="Tlat.errors.required">Name is required.</p>
+							</div>
+				</div>
+				<div class="form-group">
+					<label for="lng">Longitude</label>
+						<input [readonly]="rdonly" required class="form-control" type="text" name="lng" #Tlng="ngModel" [(ngModel)]="lng">
+						<div *ngIf="Tlng.touched && Tlng.invalid" class="alert-error">
+								<p *ngIf="Tlngrs.required">Longitude is required.</p>
+							</div>
+				</div>
+			</div>
+
+		</div>
+		
+		<div ngModelGroup="company">
+			<div class="form-group">
+				<label for="companyName">Company Name</label>
+					<input [readonly]="rdonly" required class="form-control" type="text" name="companyName" #TcomName="ngModel" [(ngModel)]="companyName">
+					<div *ngIf="TcomName.touched && TcomName.invalid" class="alert-error">
+							<p *ngIf="TcomName.errors.required">Company Name is required.</p>
+						</div>
+			</div>
+			<div class="form-group">
+				<label for="catchPhrase">CatchPhrase</label>
+					<input [readonly]="rdonly" required class="form-control" type="text" name="catchPhrase" #Tcp="ngModel" [(ngModel)]="catchPhrase">
+					<div *ngIf="Tcp.touched && Tcp.invalid" class="alert-error">
+							<p *ngIf="Tcp.errors.required">CatchPhrase is required.</p>
+						</div>
+			</div>
+			<div class="form-group">
+				<label for="bs">BS</label>
+					<input [readonly]="rdonly" required class="form-control" type="text" name="bs" #Tbs="ngModel" [(ngModel)]="bs">
+					<div *ngIf="Tbs.touched && Tbs.invalid" class="alert-error">
+							<p *ngIf="Tbs.errors.required">BS is required.</p>
+						</div>
+			</div>
+		</div> -->
+
+		<button class="btn btn-primary" (click)="editForm(userForm)" [hidden]="showEdits">Edit</button>
+		<button class="btn btn-success" type="submit" (click)="submitForm(userForm)" [disabled]="userForm.invalid" [hidden]="!showEdits">Add</button>&nbsp;
+		<button class="btn btn-danger" (click)="cancelForm()" [hidden]="!showEdits">Cancel</button>&nbsp;
+		<button class="btn btn-primary" type="reset" [hidden]="!showEdits">Clear</button>
+		<button class="btn btn-primary" (click)="showUsers()" [hidden]="showEdits">Show All Users</button>
+
+	</form>
+	</div>	
+	<div>
+		<ul class="list-group" *ngIf="users">
+			<li class="list-group-item"
+				*ngFor="let user of users">
+			  {{user.text}}
+			  {{user.title}}
+			</li>
+		  </ul>
+	</div>
+	</div>
