@@ -8,7 +8,7 @@ const app = express();
 app.use(express.static('/dist/ang6-heroku-frontend'));
 console.log(__dirname);
 
-app.get('/*', function(req,res) {
+app.get('/*all', function(req,res) {
     
 res.sendFile(path.join('/dist/ang6-heroku-frontend/index.html'));
 console.log("Path"+path);
